@@ -1,0 +1,40 @@
+Challenge #1: Using cd, ls, cat command
+
+Move into the current user’s home directory using the cd command.
+List the contents of /etc using the ls command and an absolute path.
+Display the contents of /var/log/cloud-init-output.log using the cat command and an absolute path.
+Move into the root directory (/) using an absolute path.
+
+
+Challenge #2: Using the Tail Command
+
+Using the tail command, provide a output of the last 10 lines of the log file located at /var/log/cloud-init-output.log.
+
+
+Challenge #3: Piping, Grep, Vi, Cat.
+
+Display the contents of /etc/ssh/ssh_config page using the cat command and search for the word "ciphers" using the grep command.
+Download the content of this page to your server or local machine.
+Edit the downloaded page using vi and replace 'enter-your-name-here' with your name.
+
+
+Challenge #4: Using the package installer
+
+Become root temporarily in a terminal.
+Run the following command as root: yum update && yum install telnet nc httpd
+Search for a package named squid in the official repositories and display information about it.
+Logout root from the terminal using a keyboard shortcut.
+
+
+Challenge #5: Create Directory
+
+Using the mkdir commands create the directory names: centos, ubuntu, redhat.
+Navigate to each directory using cd and create the files security.txt and updates.txt.
+Send a screenshot for each directory.
+
+
+Bonus:
+
+Install the nginx package web server using yum.
+Verify the status of the nginx web server is running.
+Remove the web server using yum.
