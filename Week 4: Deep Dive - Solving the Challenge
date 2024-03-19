@@ -1,0 +1,19 @@
+Challenge 1:
+
+Launch an Ubuntu EC2 instance.
+Create an IAM role with your name and attach an IAM policy “AmazonS3FullAccess” 
+Attach the IAM role created above to your EC2 instance through the Instance Profile option and send a screenshot. Unsure of what to do? Refer to this documentation for hint.
+
+Challenge 2:
+
+Download AWS cli using the steps here:
+Download Package for aws cli:
+Aws cli Mac users: https://awscli.amazonaws.com/AWSCLIV2.pkg
+Windows Users: https://awscli.amazonaws.com/AWSCLIV2.msi
+
+Create an IAM user and download the secret and access keys to your local machine.
+Configure and verify that IAM user is successfully installed using the below command.
+aws configure
+ aws sts get-caller-identity
+
+Set up MFA and attach a screenshot to this task.
