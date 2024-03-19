@@ -1,19 +1,86 @@
-Challenge 1:
+The Challenge:
 
-Launch an Ubuntu EC2 instance.
-Create an IAM role with your name and attach an IAM policy “AmazonS3FullAccess” 
-Attach the IAM role created above to your EC2 instance through the Instance Profile option and send a screenshot. Unsure of what to do? Refer to this documentation for hint.
+You're a Cloud/DevOps Engineer at a startup, and your team is rapidly growing. 
+You need a secure and scalable solution to back up your company's critical data. 
+Your manager has tasked you with implementing a solution using AWS.
 
-Challenge 2:
 
-Download AWS cli using the steps here:
-Download Package for aws cli:
-Aws cli Mac users: https://awscli.amazonaws.com/AWSCLIV2.pkg
-Windows Users: https://awscli.amazonaws.com/AWSCLIV2.msi
+## Challenge 1:
 
-Create an IAM user and download the secret and access keys to your local machine.
-Configure and verify that IAM user is successfully installed using the below command.
+### Task:
+1. Launch an Ubuntu EC2 instance.
+2. Create an IAM role with your name and attach an IAM policy “AmazonS3FullAccess”.
+3. Attach the IAM role created above to your EC2 instance through the Instance Profile option.
+4. Send a screenshot of the attached IAM role.
+## Challenge 2:
+
+## Challenge 2:
+### Task:
+1. Download AWS CLI using the provided links.
+   - [AWS CLI for Mac users](https://awscli.amazonaws.com/AWSCLIV2.pkg)
+   - [AWS CLI for Windows users](https://awscli.amazonaws.com/AWSCLIV2.msi)
+2. Create an IAM user and download the secret and access keys to your local machine.
+3. Configure AWS CLI and verify that IAM user is successfully installed using the below commands:
 aws configure
- aws sts get-caller-identity
+4. Set up Multi-Factor Authentication (MFA) and attach a screenshot to this task.
 
-Set up MFA and attach a screenshot to this task.
+
+Solution:
+### Challenge 1: Launch an Ubuntu EC2 instance and attach IAM role
+
+1. **Launch an Ubuntu EC2 Instance:**
+   - Log in to the AWS Management Console.
+   - Navigate to the EC2 service.
+   - Click on "Launch Instance" and choose an Ubuntu AMI.
+   - Follow the steps in the wizard, including selecting the instance type, configuring instance details, adding storage, adding tags, configuring security groups, and reviewing.
+   - Click "Launch", and select an existing key pair or create a new one to access the instance securely.
+
+2. **Create an IAM Role:**
+   - Navigate to the IAM service.
+   - Click on "Roles" in the left-hand navigation pane.
+   - Click on "Create role".
+   - Choose "EC2" as the service that will use this role.
+   - In the permissions step, search for and attach the policy named "AmazonS3FullAccess".
+   - Review and name the role appropriately, then click "Create role".
+
+3. **Attach IAM Role to EC2 Instance:**
+   - Once the role is created, go back to the EC2 service.
+   - Select the EC2 instance you launched earlier.
+   - Click on "Actions" -> "Instance Settings" -> "Attach/Replace IAM Role".
+   - Choose the IAM role you created from the dropdown and click "Apply".
+
+4. **Take a Screenshot:**
+   - Once the IAM role is attached to the EC2 instance, take a screenshot of the EC2 instance details page showing the IAM role information.
+
+### Challenge 2: Download AWS CLI, Create IAM user, Configure IAM user, and Set up MFA
+
+1. **Download AWS CLI:**
+   - Depending on your operating system, download the appropriate AWS CLI package from the provided links.
+   - Install the AWS CLI following the installation instructions provided for your operating system.
+
+2. **Create an IAM User:**
+   - Navigate to the IAM service in the AWS Management Console.
+   - Click on "Users" in the left-hand navigation pane.
+   - Click on "Add user".
+   - Enter a username and select "Programmatic access" as the access type.
+   - Attach policies as needed (e.g., AdministratorAccess for testing purposes).
+   - Review and create the user. Take note of the access key ID and secret access key provided after user creation.
+
+3. **Configure AWS CLI:**
+   - Open a terminal or command prompt.
+   - Run `aws configure`.
+   - Enter the access key ID and secret access key when prompted.
+   - Set the default region and output format as per your preference.
+
+4. **Verify IAM User Configuration:**
+   - Run `aws sts get-caller-identity` in the terminal/command prompt.
+   - Ensure that the output displays the correct user information without errors.
+
+5. **Set Up MFA (Multi-Factor Authentication):**
+   - Navigate to the IAM service in the AWS Management Console.
+   - Click on "Users" in the left-hand navigation pane.
+   - Select the IAM user you created earlier.
+   - In the "Security credentials" tab, click on "Manage" next to "Assigned MFA device".
+   - Follow the prompts to set up MFA using a virtual or hardware MFA device.
+
+Ensure to follow all steps carefully and verify each action to ensure the setup is correct and functional.
